@@ -1,0 +1,48 @@
+//use of variables
+@background-color:lightblue;
+
+body{
+  background-color: @background-color;
+}
+
+
+.Input{
+    border:none;
+    background-color:@background-color ;
+}
+
+//use of nesting
+img{
+  padding:10px;
+  .display{
+    width:auto;
+  }
+}
+
+//usage of mixins
+.font{
+  font-weight: bold;
+}
+
+h2{
+  font-size:20px;
+  .font();
+}
+
+h1{
+  text-align: center;
+  font-size:30px;
+  .font();
+}
+
+.height{
+  height:50px!important;
+}
+
+.button{
+  .height();
+}
+
+.input{
+  .height();
+}
