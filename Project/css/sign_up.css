@@ -1,0 +1,10 @@
+/*written by Wenhao Xu*/
+.login{
+     background-image: url('../pictures/downtown.jpg');
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+
+}
+

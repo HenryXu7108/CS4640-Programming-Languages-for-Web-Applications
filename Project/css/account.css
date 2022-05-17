@@ -1,0 +1,22 @@
+/*written by Wenhao Xu*/
+.scrollable{
+    height:300px;
+    width:1000px;
+    overflow: scroll;
+}
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+.scrolltitle{
+    text-align: center;
+    font-style: italic;
+
+}
+.main{
+    background-image: url("../pictures/bgi.png");
+    background-color: #3381ec;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

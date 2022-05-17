@@ -1,0 +1,108 @@
+/*written by Xin Sun*/
+.slideShowContainer{
+    max-width:100%;
+    position:relative;
+    margin:auto;
+}
+
+.font{
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .prev, .next,.text {font-size: 10px}
+
+    .font{
+        font-size:20%;
+    }
+
+    .textCentered {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:20%;
+    }
+
+
+    .imgCentered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height:100%;
+    }
+
+    .smaller{
+        font-size:100%;
+    }
+}
+
+*{
+    box-sizing:border-box;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.slideStyle{
+    display: none;
+}
+
+.previous, .next{
+    cursor:pointer;
+    position: absolute;
+    top:50%;
+    width:auto;
+    padding:20px;
+    margin-top:-22px;
+    color:white;
+    font-weight:bold;
+    font-size:22px;
+    transition:0.7s ease;
+    border-radius: 0 4px 4px 0;
+    user-select:none;
+}
+
+.next{
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.imgCentered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.whiteColor{
+    color:white;
+}
+
+.textCentered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.textUnderImg{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+button:hover{
+    background-color: #385;
+}
+
+/* search.css is from bootstrap*/
+.input-group.md-form.form-sm.form-1 input{
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}

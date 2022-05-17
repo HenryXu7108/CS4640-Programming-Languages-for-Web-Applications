@@ -1,0 +1,41 @@
+<div class="row">
+  <h3 [ngStyle]="{'color':'blue'}">
+    {{message}}
+  </h3>
+  <div class="col-xs-8 mx-auto">
+    <form #form="ngForm" >
+      <div class="h-10 p-5 mb-3">
+        <input
+          required
+          #description="ngModel"
+          [class.is-invalid]="description.invalid && description.touched"
+          [(ngModel)] = "this.ans" type="text" class="form-control" id="answer" name="answer" placeholder="Enter a word here">
+        <small class="text-danger"
+               [class.d-none]="description.valid || description.untouched">Word cannot be empty</small>
+      </div>
+      <div class="text-center">
+        <button
+          type="button" class="btn btn-primary" id="submit" (click)="submit()">Submit</button>
+      </div>
+    </form>
+    <div class="text-center">
+      <br>
+      <button type="button" class="btn btn-success" id="new_word" (click)="new_word()">New Word</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div>
+  <div *ngIf="valid" [ngClass]="{'text-success':true}">
+    <h4>Game Stats</h4>
+    <div><h5>Prior Guess: </h5><div *ngFor="let word of prior">{{word}}</div></div>
+    <div><h5>Characters in word: {{in_word}} </h5></div>
+    <div><h5>Characters in right location: </h5><div *ngFor="let char of in_place_list">{{char}}</div></div>
+    <div><h5>The word guessed is {{length}} </h5></div>
+  </div>
+</div>
+
